@@ -1,0 +1,16 @@
+
+.jumbotron {
+	background: #8B4513;
+	color: white;
+	text-align: center;
+}
+
+.panel-body {
+	background: #4169E1;
+	color: white;
+}
+
+.btn {
+	background: #4169E1;
+	color: white;
+}

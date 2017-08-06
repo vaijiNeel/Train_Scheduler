@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Scheduler</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	
+	<!-- Link to Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Link to css files -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css">	 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	
+	<!-- Link to jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Link to Moment.js -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	
+	<!-- Firebase JavaScript Link -->
+  	<!-- <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> -->
+  	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<!-- main page header -->
+		<div class="row">
+			<div class="jumbotron col-md-12 col-sm-12 col-xs-12">
+				<h1>Anytime is Train Time</h1>
+				<h4>Choo Choo. Chee Chee.</h4>
+			</div>
+		</div>
+
+		<!-- current train schedules - table -->
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Current Train Scheduler
+					</div>
+					<div class="panel-footer">
+						<table class="table">
+							<!-- table header -->
+							<thead>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency (min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+								<!-- <th>Update/Remove</th>	-->
+							</thead>
+							<!-- table data -->
+							<tbody class="tableBody">
+								<!-- rows added here by jquery -->
+							</tbody>
+						</table>
+					</div>					
+				</div>
+			</div>
+		</div>
+
+		<!-- add schedule - input form -->
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Add Train Schedule
+					</div>
+					<div class="panel-footer">
+						<form>
+							<div class="form-group">
+								<label for="train-name">Train Name</label>
+								<input type="text" class="form-control" id="train-name" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="destination">Destination</label>
+								<input type="text" class="form-control" id="destination" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="train-time">First Train Time (HH:mm - military time)</label>
+								<input type="text" class="form-control" id="train-time" placeholder="HH:mm">
+							</div>
+							<div class="form-group">
+								<label for="frequency">Frequency (min)</label>
+								<input type="text" class="form-control" id="frequency" placeholder="mm">
+							</div>									
+							<button type="button" value="submit" class="btn btn-default">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Link to javascript file -->
+	<script type='text/javascript' src="assets/javascript/trainScheduler.js"></script>
+</body>
+</html>
